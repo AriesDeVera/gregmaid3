@@ -24,6 +24,7 @@ public class GregBot {
      * @throws LoginException occurs when bot token is invalid.
      */
     public GregBot() throws LoginException {
+        config = Dotenv.configure().load();
         String token = System.getenv("TOKEN");
         DefaultShardManagerBuilder builder = DefaultShardManagerBuilder.createDefault(token);
 
