@@ -2,6 +2,7 @@ package com.deveraa.gregbot;
 
 import com.deveraa.gregbot.commands.CommandManager;
 import com.deveraa.gregbot.listeners.EventListener;
+import io.github.cdimascio.dotenv.Dotenv;
 import net.dv8tion.jda.api.OnlineStatus;
 import net.dv8tion.jda.api.entities.Activity;
 import net.dv8tion.jda.api.requests.GatewayIntent;
@@ -14,7 +15,8 @@ import javax.security.auth.login.LoginException;
 
 
 public class GregBot {
-
+    
+    private final Dotenv config;
     private final ShardManager shardManager;
 
     /**
